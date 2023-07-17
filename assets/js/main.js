@@ -1,8 +1,31 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
   document.getElementById("form-subscribe").addEventListener("submit", (e) => {
     e.preventDefault();
   });
 });
+
+  function ChangeImage() {
+    const imagem = document.getElementById("image");
+    
+    // Obtém o tamanho da tela
+    var larguraTela = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    
+    if (larguraTela <= 600) {
+      // Troca a imagem para a versão móvel
+      imagem.src = "./assets/images/illustration-sign-up-mobile.svg";
+      imagem.alt = "Nova Imagem Mobile";
+    } else {
+      // Volta para a imagem original
+      imagem.src = "./assets/images/illustration-sign-up-desktop.svg";
+      imagem.alt = "Imagem Original";
+    }
+  }
+
+  // Verifica o tamanho da tela quando ocorrer uma alteração de redimensionamento
+  window.addEventListener('resize', ChangeImage);
+
+  // Executa a função no carregamento inicial
+  ChangeImage();
 
 document.getElementById("button").addEventListener("click", () => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -27,4 +50,7 @@ document.getElementById("button").addEventListener("click", () => {
     messageAlert.textContent = "Valid email Required";
     email.classList.add("bordered-Red");
   }
+
+  
 });
+
