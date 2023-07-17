@@ -41,7 +41,14 @@ h6 {
 
 /* CONGRATS PAGE */
 #card-congrats{
-  width: 100%;
-  max-width: 22rem;
+ 
+  width: 20em;
   background-color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 768px) {
+  #card-congrats{
+    width: 100%;
+    height: 100vh;
+  }
 }

@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
     // Obtém o tamanho da tela
     var larguraTela = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     
-    if (larguraTela <= 600) {
+    if (larguraTela <= 770) {
       // Troca a imagem para a versão móvel
       imagem.src = "./assets/images/illustration-sign-up-mobile.svg";
       imagem.alt = "Nova Imagem Mobile";
@@ -37,7 +37,7 @@ document.getElementById("button").addEventListener("click", () => {
 
     // VERIFY IF THE EMAIL IS VALID
     if (regex.test(email)) {
-      return true; // O email é válido
+      return true; // 
     } else {
       return false; // O email é inválido
     }
@@ -46,6 +46,7 @@ document.getElementById("button").addEventListener("click", () => {
   if (EmailVerify(email.value)) {
     messageAlert.textContent = "";
     email.classList.remove("bordered-Red");
+    window.location.href = "greetings.html"
   } else {
     messageAlert.textContent = "Valid email Required";
     email.classList.add("bordered-Red");
