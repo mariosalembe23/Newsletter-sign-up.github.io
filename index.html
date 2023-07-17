@@ -32,7 +32,7 @@
     >
       <div
         id="card"
-        class=" p-5 rounded-md items-center flex flex-row justify-center"
+        class="p-5 rounded-md items-center flex flex-row justify-center"
       >
         <!-- Sign-up form start -->
         <div id="containerText" class="p-8">
@@ -115,23 +115,31 @@
             </div>
           </div>
           <!-- FORM CONTAINER -->
-          <div id="formContainer" class="mt-4">
-            <label for="email" class="text-sm text-gray-700"
-              >Email Adress</label
-            >
-            <input
-              type="email"
-              class="border mt-2 mb-4 outline-none border-gray-400 w-full rounded-md px-2 py-2.5 focus:border focus:border-gray-950"
-              name="email"
-              id="email"
-              placeholder="Enter your Email"
-            />
-            <a
-              href="#"
-              class="text-center transition-all font-bold py-3 w-full block rounded-md buttonSubscribe"
-              >Subscribe to monthly newsletter</a
-            >
-          </div>
+          <form action="" id="form-subscribe">
+            <div id="formContainer" class="mt-4">
+              <div class="w-full flex justify-between items-center">
+                <label for="email" class="text-sm text-gray-700"
+                  >Email Adress</label
+                >
+
+                <small id="alert" class="text-red-700"></small>
+              </div>
+              <input
+                type="email"
+                class="border mt-2 mb-4 outline-none border-gray-400 w-full rounded-md px-2 py-2.5 focus:border focus:border-gray-950"
+                name="email"
+                id="email"
+                placeholder="Enter your Email"
+              />
+              <button
+                type="button"
+                id="button"
+                class="text-center transition-all font-bold py-3 w-full block rounded-md buttonSubscribe"
+              >
+                Subscribe to monthly newsletter
+              </button>
+            </div>
+          </form>
         </div>
         <div id="containerImg">
           <img
@@ -147,5 +155,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Mário Lino Salembe</a>.
   </div> -->
+
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>

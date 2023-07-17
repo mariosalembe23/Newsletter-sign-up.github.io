@@ -27,10 +27,13 @@ h6 {
     /* width: 375px;
     max-width: 1440px; */
 }
-.buttonSubscribe{
+#button{
     background-color: hsl(234, 29%, 20%);
     color: hsl(0, 0%, 100%);
 }
-.buttonSubscribe:hover{
+#button:hover{
     background-image: linear-gradient(to right, #eb3c59, hsl(4, 100%, 67%));
+}
+.bordered-Red{
+  border: 1px solid rgb(240, 25, 25) !important;
 }
